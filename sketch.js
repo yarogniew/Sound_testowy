@@ -10,18 +10,18 @@ function setup() {
 
   sliderVolume = createSlider(0, 1, 0.5, 0.01);
   sliderVolume.position(20, 20);
-  sliderRate = createSlider(0, 3, 1, 0.01);
+  sliderRate = createSlider(0, 4, 1, 0.01);
   sliderRate.position(20, 50);
   sliderPan = createSlider(-1, 1, 0, 0.01);
   sliderPan.position(20, 80);
 }
 
 function loaded(){
-    song.play();
+    play.loop();
 }
 
 function draw(){
-  background(random(100,120));
+  background(120);
 //  console.log(slider.value());
     song.setVolume(sliderVolume.value());
     song.rate(sliderRate.value());
